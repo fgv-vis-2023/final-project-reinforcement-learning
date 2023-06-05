@@ -1,0 +1,97 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0 75px 0 75px;
+}
+
+#splash h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 38px;
+    border-bottom: 2px solid #000;
+    margin: 30px 100px 0 100px;
+    text-align: center;
+}
+
+#splash h1 span:last-child{
+    color: #FFF;
+    -webkit-text-stroke: 1px #000;
+}
+
+#splash h2{
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+#splashgraphic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    margin: 30px 0 0 0;
+}
+
+#treetops{
+    background-color: rgb(222, 218, 183);
+    background-image: url("mockImages/treetop.png");
+    border: 2px solid rgb(179, 169, 140);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#splashgraphic .legenda{
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+#splashgraphic .timeline{
+    background-color: silver;
+    width: 100%;
+    height: 40px;
+}
+
+#ps-label-graphic{
+    background-color: rgb(222, 218, 183);
+    background-image: url("mockImages/pseduolabel.png");
+    border: 2px solid rgb(179, 169, 140);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#introduction .pseudo-label>div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0 0 0;
+}
+
+#introduction .pseudo-label .left{
+    width: min-content;
+}
+
+#introduction .pseudo-label .timeline{
+    width: 100%;
+    height: 40px;
+    background-color: silver;
+}
+
+#sampling .sampling-view>div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0 0 0;
+}
+
+#sampling .sampling-view .left{
+    background-color: rgb(222, 218, 183);
+    background-image: url("mockImages/sampling.png");
+    border: 2px solid rgb(179, 169, 140);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
