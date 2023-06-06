@@ -1,6 +1,57 @@
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #bce6dc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+
+.samplelabels{
+    width: 120px;
+    height: 120px;
+    background: url("mockImages/labels.png");
+    background-size: cover;
+    position: absolute;
+    left: calc(50% + 170px);
+}
+
+content{
+    margin: 0;
     padding: 0 75px 0 75px;
+    background-color: #FFF;
+    max-width: min(900px, 100% - 50px);
+    display: block;
+    box-shadow: 0 0 20px 10px #00000055;
+    text-align: center;
+}
+
+p, ul{
+    text-align: justify;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.center .button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.center .button form{
+    width: max-content;
+}
+
+.timeline>div{
+    display: flex;
+    justify-content: center;
 }
 
 #splash h1{
@@ -55,9 +106,6 @@ body{
 }
 
 #ps-label-graphic{
-    background-color: rgb(222, 218, 183);
-    /* background-image: url("mockImages/pseduolabel.png"); */
-    border: 2px solid rgb(179, 169, 140);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -77,8 +125,8 @@ body{
 
 #introduction .pseudo-label .subtitles{
     position: absolute;
-    top: 350px;
-    left: 5px;
+    top: 50px;
+    left: 370px;
 }
 
 #introduction .pseudo-label .timeline{
@@ -99,6 +147,10 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 
