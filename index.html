@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <title>Visualize & Reinforce</title>
 </head>
 <body>
@@ -17,63 +18,69 @@
         </h2>
 
         <div id="splashgraphic">
-            <div id="treetops" style="height: 400px; width: 400px;"></div>
-            <div class="legenda">
-                <ul>
-                    <li>AAAAAAAAA</li>
-                    <li>BBBBBBBBB</li>
-                    <li>CCCCCCCCC</li>
-                </ul>
+            <div id="treetops" style="height: 500px; width: 500px;">
+                <div id="observablehq-viewof-trees-33988737"></div>
             </div>
+            <div class="legenda">
+                <div id="observablehq-viewof-legend_trees-33988737"></div>
+            </div>
+        </div>
+            
             <div class="timeline"></div>
         </div>
     </section>
     <section id="introduction">
         <h1>Introdução</h1>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam illum ut officia natus, eius tempora sequi maxime sapiente libero accusantium saepe eaque sed rerum, amet corrupti cumque nobis delectus necessitatibus totam laudantium facere fugiat obcaecati minus! Provident ipsam, maiores atque optio, deleniti facere dignissimos quidem accusamus quaerat itaque, ullam amet! Ipsam, quaerat quibusdam ea incidunt nostrum, nemo, consectetur ratione assumenda illum eaque vel libero reiciendis dolore doloribus officiis rerum? Reiciendis.
+            Mapear as espécies de árvores em uma vasta floresta é uma tarefa difícil, parte da complicação vem do fato da falta de acesso a dados anotados, em outras palavras, a proporção de árvores das quais sabemos as espécies e as quais não sabemos é bem baixa. Com isso em mente, no decorrer desse trabalho será proposto uma solução para a problemática utilizando algoritmo de pseudo-labeling juntamente com reinforcement learning.
         </p>
         <div class="pseudo-label">
             <div>
                 <div class="left">
-                    <div id="ps-label-graphic" style="height: 300px; width: 500px"></div>
-                    <div class="timeline"></div>
+                    <div id="ps-label-graphic">
+                        <div id="observablehq-viewof-pseudoLabel-33988737"></div>
+                        <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-33988737"></div>
+                    </div>
+                    <div class="timeline">
+                        <div id="observablehq-viewof-iterationSlider-33988737"></div>
+                    </div>
                 </div>
                 <div class="right">
-                    <h2>pseudo-label</h2>
+                    <h2>pseudo-labeling</h2>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur culpa dolores eos fugit expedita deserunt sint voluptate cupiditate hic aliquam nihil laboriosam quaerat qui, soluta minima! Laboriosam sint labore cupiditate a laudantium rem aperiam incidunt voluptate iure omnis magnam blanditiis quis rerum quas nihil ratione culpa, est consequuntur accusantium cumque vero provident alias soluta at. Asperiores, ipsam. Quia.
+                        O algoritmo de pseudo-labeling consiste em alimentar o conjunto de treinamento com labels virtuais. Para isso, utiliza-se dos poucos dados anotados disponíveis no dataset para treinar um classificador, e com base nessas classificações feitas podemos decidir incluir ou não novas amostras no conjunto de treino.
+	                    Uma forma que segundo Cascante-Bonila (2020) acompanha o estado da arte é utilizar de análise de currículo juntamente com o pseudo-labeling, que consiste em avaliar apenas os pontos com maior probabilidade de ser de determinada classe.
                     </p>
                 </div>
             </div>   
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur culpa sit dolor vero deleniti iusto, suscipit quibusdam inventore nobis. Quae cumque blanditiis quibusdam ad fugiat iure nobis quis corporis voluptas!
+                O gráfico acima representa o algoritmo de pseudo-labeling com análise de currículo classificando 900 pontos tendo acesso inicialmente a apenas 100.
+                Além de utilizar da análise de currículo, queremos dar um passo além e incluir um algoritmo de RL que tome a decisão de incluir, ou não, os novos pontos. Dessa forma conseguimos adicionar informações adicionais na hora da decisão, como por exemplo a proporção da distribuição das árvores na floresta.
             </p>
         </div>
     </section>
     <section id="sampling">
         <h1>sampling</h1>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea totam sapiente fuga ipsam perferendis, delectus porro fugit impedit libero quod tempora iusto reiciendis, aliquam rerum. Ab, culpa similique. Vel quis voluptates placeat repellat at tenetur expedita laboriosam? Fugit, voluptatem doloribus inventore omnis tempore libero, ab placeat dignissimos, sint ratione asperiores.
+            Em La Rosa (2021), foi implementado uma rede neural convolucional para tratar de dados hiperespectrais de florestas brasileiras, tais dados possuem alto peso em memória e exige vasto poder computacional para tratá-los. Para ultrapassar essa dificuldade de hardware e de tempo, os dados foram substituídos por dados gerados partindo de uma mistura de gaussianas.
         </p>
 
         <div class="sampling-view">
             <div>
-                <div class="left" style="width: 400px; height: 300px;"></div>
+                <div class="left">
+                    <div id="observablehq-viewof-normalMixturePlot-33988737"></div>
+                </div>
                 <div class="right">
                     <h2>Faça sua amostragem</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quod.
                     </p>
                     <div class="sliders">
-                        ------------ <br>
-                        ------------ <br>
-                        ------------ <br>
-                        ------------ <br>
-                        ------------ <br>
-                        ------------ <br>
-                        ------------ <br>
-                        <button>...</button>
+                        <div id="observablehq-viewof-mean1-33988737"></div>
+                        <div id="observablehq-viewof-mean2-33988737"></div>
+                        <div id="observablehq-viewof-var1-33988737"></div>
+                        <div id="observablehq-viewof-var2-33988737"></div>
+                        <div id="observablehq-viewof-weight-33988737"></div>
                     </div>
                 </div>
             </div>
@@ -82,5 +89,82 @@
             </p>
         </div>
     </section>
+
+    <section id="Metodo">
+        <h1>Metodo</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ducimus quod impedit, earum dolores provident vitae voluptate hic possimus iure excepturi. Nam sequi doloremque similique enim maxime libero explicabo accusantium necessitatibus commodi consequatur esse laborum quo voluptatibus aliquid asperiores numquam reiciendis magni impedit, maiores inventore deleniti voluptates placeat eum! Excepturi molestiae neque iusto quaerat dolorum eius ipsam pariatur nisi quia.
+        </p>
+    </section>
+
+    <section id="resultados">
+        <h1>resultados</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, quaerat quasi. Fugit, nihil nemo. Iure necessitatibus corrupti voluptatibus dignissimos eligendi in? Iure veniam nihil facilis pariatur deserunt consequatur saepe similique?
+        </p>
+
+        <div class="confusionMatrix">
+            <div class="left">
+                <div id="observablehq-viewof-matrix-33988737"></div>
+            </div>
+            <div class="right">
+                <div id="observablehq-viewof-matrix_legend-33988737"></div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div id="observablehq-viewof-matrix_iterationSlider-33988737"></div>
+        </div>
+
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde cum, aliquid nesciunt suscipit maxime consectetur eius tempore numquam natus soluta sit nobis ut magnam quaerat reprehenderit tempora veniam amet. Autem.
+        </p>
+    </section>
+
+    <section id="referencias">
+
+        <p>Credit: <a href="https://observablehq.com/d/31ca7950886a92d8@1057">Reinforcement Learning by amigos</a></p>
+    </section>
+    
+    <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/31ca7950886a92d8@1359.js?v=3";
+        new Runtime().module(define, name => {
+          if (name === "viewof pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-pseudoLabel-33988737"));
+          if (name === "viewof iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-iterationSlider-33988737"));
+          if (name === "viewof trees") return new Inspector(document.querySelector("#observablehq-viewof-trees-33988737"));
+          if (name === "viewof matrix_iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-matrix_iterationSlider-33988737"));
+          if (name === "viewof matrix_legend") return new Inspector(document.querySelector("#observablehq-viewof-matrix_legend-33988737"));
+          if (name === "viewof matrix") return new Inspector(document.querySelector("#observablehq-viewof-matrix-33988737"));
+          if (name === "viewof legend_pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-legend_pseudoLabel-33988737"));
+          if (name === "viewof legend_trees") return new Inspector(document.querySelector("#observablehq-viewof-legend_trees-33988737"));
+          if (name === "viewof mean1") return new Inspector(document.querySelector("#observablehq-viewof-mean1-33988737"));
+          if (name === "viewof mean2") return new Inspector(document.querySelector("#observablehq-viewof-mean2-33988737"));
+          if (name === "viewof var1") return new Inspector(document.querySelector("#observablehq-viewof-var1-33988737"));
+          if (name === "viewof var2") return new Inspector(document.querySelector("#observablehq-viewof-var2-33988737"));
+          if (name === "viewof weight") return new Inspector(document.querySelector("#observablehq-viewof-weight-33988737"));
+          if (name === "viewof normalMixturePlot") return new Inspector(document.querySelector("#observablehq-viewof-normalMixturePlot-33988737"));
+          return ["data_pseudo","data_matrix"].includes(name);
+        });
+        </script>
+        
+
 </body>
 </html>
+
+
+
+<div id="observablehq-viewof-pseudoLabel-33988737"></div>
+<div id="observablehq-viewof-iterationSlider-33988737"></div>
+<div id="observablehq-viewof-trees-33988737"></div>
+<div id="observablehq-viewof-matrix_iterationSlider-33988737"></div>
+<div id="observablehq-viewof-matrix_legend-33988737"></div>
+<div id="observablehq-viewof-legend_pseudoLabel-33988737"></div>
+<div id="observablehq-viewof-legend_trees-33988737"></div>
+<div id="observablehq-viewof-mean1-33988737"></div>
+<div id="observablehq-viewof-mean2-33988737"></div>
+<div id="observablehq-viewof-var1-33988737"></div>
+<div id="observablehq-viewof-var2-33988737"></div>
+<div id="observablehq-viewof-weight-33988737"></div>
+
