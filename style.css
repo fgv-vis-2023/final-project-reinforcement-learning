@@ -60,6 +60,7 @@ h1 {
     line-height: 1.5;
     text-transform: uppercase;
     padding-bottom: 10px;
+    padding-top: 10px;
     text-align: initial;
 }
 
@@ -223,4 +224,20 @@ p, ul{
 #resultados .confusionMatrix .left{
     width: min-content;
     position: relative;
+}
+
+.box {
+    border: 2px solid #e5e5e5;
+}
+
+.innerbox {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-left: 40px;
+    margin-right: 40px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
 }
