@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <title>Visualize & Reinforce | About</title>
     <style>
+        body {
+            background-size: cover;
+        }
+
         .authors-container {
             display: flex;
             align-items: center;
@@ -48,15 +52,30 @@
             padding-top: 10px;
         }
 
-        #splash a {
+        #title a {
             text-decoration: none;
             color: black;
         }
+
+        #title h1{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 38px;
+        border-bottom: 2px solid #000;
+        margin: 30px 100px 0 100px;
+        text-align: center;
+        }
+
+        #title h1 span:last-child{
+            color: #FFF;
+            -webkit-text-stroke: 1px #000;
+        }
+
     </style>
 </head>
 <body>
     <content>
-        <section id="splash">
+        <section id="title">
             <a href="https://fgv-vis-2023.github.io/final-project-visualize-reinforce/">
                 <h1>
                     <span>Visualize</span><span>Reinforce</span>
