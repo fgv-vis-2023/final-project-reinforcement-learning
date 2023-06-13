@@ -9,31 +9,36 @@
     <title>Visualize & Reinforce</title>
 </head>
 <body>
-    <content>
-        <section id="splash">
-            <h1>
-                <span>Visualize</span><span>Reinforce</span>
-            </h1>
-            <h2 class="authors">
-                <span>Gustavo Sanches</span> <span>Rodrigo Gomes</span> <span>Lucas Treuke</span>
-            </h2>
+    <section id="splash">
+        <h1>
+            <span>Visualize</span><span>Reinforce</span>
+        </h1>
+        <h2 style="display: none;" class="authors">
+            <span>Gustavo Sanches</span> <span>Rodrigo Gomes</span> <span>Lucas Treuke</span>
+        </h2>
 
-            <br>
-            <h3>Classificando copas de árvores</h3>
-            <div id="splashgraphic">
-                <div id="treetops" style="height: 500px; width: 500px;">
-                    <div id="observablehq-viewof-trees-20e10d3a"></div>
-                </div>
-                <div class="legenda">
-                    <div id="observablehq-viewof-legend_trees-20e10d3a"></div>
-                </div>
+        
+        <br>
+        <h3 style="display: none;">Classificando copas de árvores</h3>
+        <div id="splashgraphic">
+            <div class="gap"></div>
+            <div id="treetops">
+                <div id="observablehq-viewof-page-4ba48be0"></div>
             </div>
-                
-                <div class="timeline">
-                    <div id="observablehq-viewof-trees_iterationSlider-20e10d3a"></div>                
-                </div>
+            <div class="legenda">
+                <div id="observablehq-legend_trees-4ba48be0"></div>
             </div>
-        </section>
+        </div>
+
+
+        
+
+
+    </section>
+    <div class="timeline">
+        <div id="observablehq-viewof-iterationSlider-4ba48be0"></div>
+    </div>
+    <content>
         <section id="introduction">
             <h1>Introdução</h1>
             <p>
@@ -48,7 +53,9 @@
                 O Reinforcement learning será utilizado como parte do processo de escolha de quais dados devem ser categorizados e quais entrarão para o conjunto de treinamento. O objetivo dessa parte é tentar escolher apenas dados que são mais representativos e que expliquem melhor a distribuição de cada classe.
             </p>
 
-            <p>_________________________imagem interativa aqui _________________________</p>
+            <div id="fluxograma">
+                <img style="max-width: 100%;" src="mockImages/fluxograma.jfif" alt="fluxograma">
+            </div>
 
             <p>O overview do projeto pode ser visto na figura acima, passe o mouse por cima para ver breves explicações de cada etapa!</p>
 
@@ -57,11 +64,8 @@
                     <div class="left">
                         <h3>Predições: pseudo-label</h3>
                         <div id="ps-label-graphic">
-                            <div id="observablehq-viewof-pseudoLabel-20e10d3a"></div>
-                            <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-20e10d3a"></div>
-                        </div>
-                        <div class="timeline"  style="display: none">
-                            <div id="observablehq-viewof-pseudoLabel_iterationSlider-20e10d3a"></div>
+                            <div id="observablehq-viewof-pseudoLabel-4ba48be0"></div>
+                            <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-4ba48be0"></div>
                         </div>
                     </div>
                     <div class="right">
@@ -80,7 +84,7 @@
         <h1>Base de dados</h1>
         <p>No estudo realizado por La Rosa (2021), foram utilizadas imagens hiperespectrais juntamente com uma rede neural convolucional para identificar as copas das árvores e construir uma base de dados contendo características específicas de cada árvore, totalizando 14 classes de árvores com anotações. Neste trabalho, optaremos por simular os dados com o objetivo de avaliar a eficácia do método em um ambiente totalmente controlado. Em trabalhos futuros, pretendemos utilizar imagens reais das copas de árvores em conjunto com o pseudo-rotulamento.</p>
         <div class="center">
-            <div id="observablehq-viewof-gaussian_mixture-20e10d3a"></div>
+            <div id="observablehq-viewof-gaussian_mixture-4ba48be0"></div>
             <div class="samplelabels"></div>
         </div>
         <p>A nossa amostragem toma partido da premissa de que as árvores possuem 5 carácteristicas principais: Posição em X, posição em Y, feature1, feature2 e classe. A geração tanto da posição no eixo X quanto no Y foi feita apartir de uma váriavel aleatória uniforme com parâmetros 0 a 100, ou seja, as árvores tem igual probabilidade de estarem posicionadas em qualquer lugar do campo. Para as features e para a classe, foram criadas distribuições gaussianas por classe, e amostrado da mistura dessas distribuições.</p>
@@ -94,20 +98,21 @@
                 </p>
 
                 <div class="center">
-                    <div id="observablehq-viewof-muX-20e10d3a"></div>
-                    <div id="observablehq-viewof-muY-20e10d3a"></div>
-                    <div id="observablehq-viewof-sigmaX-20e10d3a"></div>
-                    <div id="observablehq-viewof-sigmaY-20e10d3a"></div>
-                    <div class="button" id="observablehq-viewof-callafunction_btn-20e10d3a"></div>
+                    <div id="observablehq-viewof-muX-4ba48be0"></div>
+                    <div id="observablehq-viewof-muY-4ba48be0"></div>
+                    <div id="observablehq-viewof-sigmaX-4ba48be0"></div>
+                    <div id="observablehq-viewof-sigmaY-4ba48be0"></div>
+                    <div class="button" id="observablehq-viewof-callafunction_btn-4ba48be0"></div>
 
-                    <div id="observablehq-viewof-samplesScatter-20e10d3a"></div>
+                    <div id="observablehq-viewof-samplesScatter-4ba48be0"></div>
 
                 </div>
 
                 <div class="sampling-view">
                     <div>
                         <div class="left">
-                            <div id="observablehq-viewof-normalMixturePlot-20e10d3a"></div>
+                            <div id="observablehq-viewof-normalMixturePlot-4ba48be0"></div>
+                            <div id="observablehq-viewof-legend_normalmixture-4ba48be0"></div>
                         </div>
                         <div class="right">
                             <h2>Faça sua amostragem</h2>
@@ -115,11 +120,11 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quod.
                             </p>
                             <div class="sliders">
-                                <div id="observablehq-viewof-mean1-20e10d3a"></div>
-                                <div id="observablehq-viewof-mean2-20e10d3a"></div>
-                                <div id="observablehq-viewof-var1-20e10d3a"></div>
-                                <div id="observablehq-viewof-var2-20e10d3a"></div>
-                                <div id="observablehq-viewof-weight-20e10d3a"></div>
+                                <div id="observablehq-viewof-mean1-4ba48be0"></div>
+                                <div id="observablehq-viewof-mean2-4ba48be0"></div>
+                                <div id="observablehq-viewof-var1-4ba48be0"></div>
+                                <div id="observablehq-viewof-var2-4ba48be0"></div>
+                                <div id="observablehq-viewof-weight-4ba48be0"></div>
                             </div>
                         </div>
                     </div>
@@ -149,15 +154,11 @@
             <h3>Matriz de confusão</h3>
             <div class="confusionMatrix">
                 <div class="left">
-                    <div id="observablehq-viewof-matrix-20e10d3a"></div>
+                    <div id="observablehq-viewof-matrix-4ba48be0"></div>
                 </div>
                 <div class="right">
-                    <div id="observablehq-viewof-matrix_legend-20e10d3a"></div>
+                    <div id="observablehq-viewof-matrix_legend-4ba48be0"></div>
                 </div>
-            </div>
-
-            <div class="timeline">
-                <div id="observablehq-viewof-matrix_iterationSlider-20e10d3a"></div>
             </div>
 
 
@@ -182,35 +183,57 @@
     
     <script type="module">
         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-        import define from "https://api.observablehq.com/d/31ca7950886a92d8@1435.js?v=3";
+        import define from "https://api.observablehq.com/d/31ca7950886a92d8@2142.js?v=3";
         new Runtime().module(define, name => {
-          if (name === "viewof pseudoLabel_iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-pseudoLabel_iterationSlider-20e10d3a"));
-          if (name === "viewof pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-pseudoLabel-20e10d3a"));
-          if (name === "viewof legend_pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-legend_pseudoLabel-20e10d3a"));
-          if (name === "viewof gaussian_mixture") return new Inspector(document.querySelector("#observablehq-viewof-gaussian_mixture-20e10d3a"));
-          if (name === "viewof trees_iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-trees_iterationSlider-20e10d3a"));
-          if (name === "viewof trees") return new Inspector(document.querySelector("#observablehq-viewof-trees-20e10d3a"));
-          if (name === "viewof legend_trees") return new Inspector(document.querySelector("#observablehq-viewof-legend_trees-20e10d3a"));
-          if (name === "viewof matrix_iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-matrix_iterationSlider-20e10d3a"));
-          if (name === "viewof matrix") return new Inspector(document.querySelector("#observablehq-viewof-matrix-20e10d3a"));
-          if (name === "viewof matrix_legend") return new Inspector(document.querySelector("#observablehq-viewof-matrix_legend-20e10d3a"));
-          if (name === "viewof muX") return new Inspector(document.querySelector("#observablehq-viewof-muX-20e10d3a"));
-          if (name === "viewof muY") return new Inspector(document.querySelector("#observablehq-viewof-muY-20e10d3a"));
-          if (name === "viewof sigmaX") return new Inspector(document.querySelector("#observablehq-viewof-sigmaX-20e10d3a"));
-          if (name === "viewof sigmaY") return new Inspector(document.querySelector("#observablehq-viewof-sigmaY-20e10d3a"));
-          if (name === "viewof callafunction_btn") return new Inspector(document.querySelector("#observablehq-viewof-callafunction_btn-20e10d3a"));
-          if (name === "viewof samplesScatter") return new Inspector(document.querySelector("#observablehq-viewof-samplesScatter-20e10d3a"));
-          if (name === "viewof mean1") return new Inspector(document.querySelector("#observablehq-viewof-mean1-20e10d3a"));
-          if (name === "viewof mean2") return new Inspector(document.querySelector("#observablehq-viewof-mean2-20e10d3a"));
-          if (name === "viewof var1") return new Inspector(document.querySelector("#observablehq-viewof-var1-20e10d3a"));
-          if (name === "viewof var2") return new Inspector(document.querySelector("#observablehq-viewof-var2-20e10d3a"));
-          if (name === "viewof weight") return new Inspector(document.querySelector("#observablehq-viewof-weight-20e10d3a"));
-          if (name === "viewof normalMixturePlot") return new Inspector(document.querySelector("#observablehq-viewof-normalMixturePlot-20e10d3a"));
-          return ["data_pseudo","data_trees","data_matrix","distX","randomX","teste","randomPoints","distY","randomY"].includes(name);
+          if (name === "viewof iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-iterationSlider-4ba48be0"));
+          if (name === "viewof pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-pseudoLabel-4ba48be0"));
+          if (name === "viewof legend_pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-legend_pseudoLabel-4ba48be0"));
+          if (name === "viewof gaussian_mixture") return new Inspector(document.querySelector("#observablehq-viewof-gaussian_mixture-4ba48be0"));
+          if (name === "viewof page") return new Inspector(document.querySelector("#observablehq-viewof-page-4ba48be0"));
+          if (name === "legend_trees") return new Inspector(document.querySelector("#observablehq-legend_trees-4ba48be0"));
+          if (name === "viewof matrix") return new Inspector(document.querySelector("#observablehq-viewof-matrix-4ba48be0"));
+          if (name === "viewof matrix_legend") return new Inspector(document.querySelector("#observablehq-viewof-matrix_legend-4ba48be0"));
+          if (name === "viewof muX") return new Inspector(document.querySelector("#observablehq-viewof-muX-4ba48be0"));
+          if (name === "viewof muY") return new Inspector(document.querySelector("#observablehq-viewof-muY-4ba48be0"));
+          if (name === "viewof sigmaX") return new Inspector(document.querySelector("#observablehq-viewof-sigmaX-4ba48be0"));
+          if (name === "viewof sigmaY") return new Inspector(document.querySelector("#observablehq-viewof-sigmaY-4ba48be0"));
+          if (name === "viewof callafunction_btn") return new Inspector(document.querySelector("#observablehq-viewof-callafunction_btn-4ba48be0"));
+          if (name === "viewof samplesScatter") return new Inspector(document.querySelector("#observablehq-viewof-samplesScatter-4ba48be0"));
+          if (name === "viewof mean1") return new Inspector(document.querySelector("#observablehq-viewof-mean1-4ba48be0"));
+          if (name === "viewof mean2") return new Inspector(document.querySelector("#observablehq-viewof-mean2-4ba48be0"));
+          if (name === "viewof var1") return new Inspector(document.querySelector("#observablehq-viewof-var1-4ba48be0"));
+          if (name === "viewof var2") return new Inspector(document.querySelector("#observablehq-viewof-var2-4ba48be0"));
+          if (name === "viewof weight") return new Inspector(document.querySelector("#observablehq-viewof-weight-4ba48be0"));
+          if (name === "viewof normalMixturePlot") return new Inspector(document.querySelector("#observablehq-viewof-normalMixturePlot-4ba48be0"));
+          if (name === "viewof legend_normalmixture") return new Inspector(document.querySelector("#observablehq-viewof-legend_normalmixture-4ba48be0"));
+          return ["data_matrix","data_trees","data_pseudo","filter","trees","distX","randomX","teste","randomPoints","distY","randomY","normal_colors","viewof draggableNormals"].includes(name);
         });
     </script>
         
 
 </body>
 </html>
+
+
+<div id="observablehq-viewof-iterationSlider-4ba48be0"></div>
+<div id="observablehq-viewof-pseudoLabel-4ba48be0"></div>
+<div id="observablehq-viewof-legend_pseudoLabel-4ba48be0"></div>
+<div id="observablehq-viewof-gaussian_mixture-4ba48be0"></div>
+<div id="observablehq-viewof-page-4ba48be0"></div>
+<div id="observablehq-legend_trees-4ba48be0"></div>
+<div id="observablehq-viewof-matrix-4ba48be0"></div>
+<div id="observablehq-viewof-matrix_legend-4ba48be0"></div>
+<div id="observablehq-viewof-muX-4ba48be0"></div>
+<div id="observablehq-viewof-muY-4ba48be0"></div>
+<div id="observablehq-viewof-sigmaX-4ba48be0"></div>
+<div id="observablehq-viewof-sigmaY-4ba48be0"></div>
+<div id="observablehq-viewof-callafunction_btn-4ba48be0"></div>
+<div id="observablehq-viewof-samplesScatter-4ba48be0"></div>
+<div id="observablehq-viewof-mean1-4ba48be0"></div>
+<div id="observablehq-viewof-mean2-4ba48be0"></div>
+<div id="observablehq-viewof-var1-4ba48be0"></div>
+<div id="observablehq-viewof-var2-4ba48be0"></div>
+<div id="observablehq-viewof-weight-4ba48be0"></div>
+<div id="observablehq-viewof-normalMixturePlot-4ba48be0"></div>
+<div id="observablehq-viewof-legend_normalmixture-4ba48be0"></div>
 
