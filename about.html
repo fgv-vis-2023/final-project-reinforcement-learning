@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="mockImages/tree.png">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <title>Visualize & Reinforce | About</title>
+    <style>
+        body {
+            background-size: cover;
+        }
+
+        .authors-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .author img {
+            width: 200px; 
+            height: 200px; 
+            border: 2px solid black;
+        }
+
+        .author p {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .paper p {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #video {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #video video {
+            max-width: 100%;
+            max-height: 100%;
+            padding-top: 10px;
+        }
+
+        #title a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #title h1{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 38px;
+        border-bottom: 2px solid #000;
+        margin: 30px 100px 0 100px;
+        text-align: center;
+        }
+
+        #title h1 span:last-child{
+            color: #FFF;
+            -webkit-text-stroke: 1px #000;
+        }
+
+    </style>
+</head>
+<body>
+    <content>
+        <section id="title">
+            <a href="https://fgv-vis-2023.github.io/final-project-visualize-reinforce/">
+                <h1>
+                    <span>Visualize</span><span>Reinforce</span>
+                </h1>
+            </a>
+        </section>
+        <div id="video">
+            <video controls>
+                <source src="aboutImages/Cuphead 2022-07-09 00-28-43.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <section id="project">
+                        <h1>Nosso projeto</h1>
+            <p>
+                Sabemos que muitos tópicos na área de Machine Learning podem parecer desconhecidos ou até mesmo uma caixa preta para o público em geral. Dessa forma, nossa missão é apresentar de forma interativa e visualmente atraente os fundamentos por trás de duas áreas específicas: Pseudo-Labeling e Reinforcement Learning.
+            </p>
+            <p>
+                Desde os passos mais básicos, buscamos fornecer um ambiente de aprendizado amigável, onde você poderá explorar e experimentar com esses conceitos em primeira mão. Para tornar a experiência ainda mais envolvente, contextualizaremos esses conceitos por meio de um caso prático: a classificação de árvores com base em imagens capturadas por drones.
+            </p>
+            <p>
+                Atualmente, utilizamos dados simulados para gerar as árvores, o que permitirá que você se familiarize com a forma como as variáveis podem ser distribuídas.  Venha conosco explorar o mundo fascinante do Machine Learning e descubra como essas poderosas técnicas podem ser aplicadas!
+            </p>
+        </section>
+        <section id="team">
+            <h1>Nossa equipe</h1>
+            <p>Estudantes da Escola de Matemática Aplicada - FGV, cursando Ciências de Dados e Inteligência Artificial. Atualmente no 5º período, decidimos criar um trabalho interdisciplinar entre Visualização de Dados e Aprendizado de Máquinas.</p>
+            <div id="authors-gallery" class="authors-container">
+                <div class="author">
+                    <a href="https://github.com/GustavoSanches55">
+                        <img src="aboutImages/gustavo.png" alt="Gustavo Sanches">
+                    </a>
+                    <p>Gustavo Sanches</p>
+                </div>
+                
+                <div class="author">
+                    <a href="https://github.com/RodrigoPintucci">
+                        <img src="aboutImages/rodrigo.png" alt="Rodrigo Pintucci">
+                    </a>
+                    <p>Rodrigo Pintucci</p>
+                </div>
+                
+                <div class="author">
+                    <a href="https://github.com/LucasTreuke">
+                        <img src="aboutImages/lucas.png" alt="Lucas Treuke">
+                    </a>
+                    <p>Lucas Treuke</p>
+                </div>
+            </div>
+
+            <br>
+            <h1>Abstract</h1>
+            <p>Este artigo apresenta o processo de concepção de um site explicativo que utiliza técnicas de visualização para auxiliar estudantes e entusiastas na compreensão de conteúdos complexos relacionados ao reinforcement learning e métodos de machine learning. O objetivo é reduzir a lacuna entre o conhecimento teórico e prático, fornecendo uma abordagem clara e acessível. O estudo propõe o uso do algoritmo de pseudo-rotulagem em conjunto com o aprendizado por reforço para mapear as espécies de árvores em uma floresta densa. O algoritmo de pseudo-rotulagem é eficiente na classificação de conjuntos de dados com poucas anotações. O aprendizado por reforço é utilizado no processo de escolha dos dados para categorização e treinamento do modelo. O objetivo é selecionar dados representativos que melhor expliquem a distribuição de cada classe.</p>
+            <div class="paper">
+                <a href="www.google.com">
+                    <img src="aboutImages/placeholder.png" alt="Paper">
+                </a>
+                <p>
+                    Artigo completo
+                </p>
+            </div>
+            <br>
+        </section>
+    </content>
+
+        
+
+</body>
+</html>
+
