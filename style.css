@@ -162,6 +162,8 @@ p, ul{
 #treetops{
     position: relative;
     flex-grow: 2;
+    min-width: 740px;
+    min-height: 500px;
     /* background-color: rgb(222, 218, 183); */
     /* background-image: url("mockImages/treetop.png"); */
     /* border: 2px solid rgb(179, 169, 140); */
@@ -290,3 +292,96 @@ p, ul{
     top: 10px;
     pointer-events: none;
 }
+
+/* SAMPLING */
+.sampling-from-normals{
+    /* position: relative; */
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sampling-from-normals .gap{
+    width: 150px;
+    height: 150px;
+}
+
+.positioning{
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+.normal-mix .controller{
+    height: 300px;
+}
+.normal-mix .controller>div:first-child{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.controller{
+    position: relative;
+    width: 400px;
+    height: 150px;
+}
+
+.controller>div:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.curve_samples{
+    fill: #00520d10;
+}
+.positioning.reverse-y{
+    transform: scaleY(-1) translate(-20px, 37px);
+}
+#controllers-y{
+    transform-origin: 75px 75px;
+    transform: rotate(90deg);
+    width: 150px;
+    height: 400px;
+    /* transform-origin: center right; */
+    /* transform: rotate(90deg) scaleX(-1); */
+}
+
+#normalControllers circle{
+    transition: r 0.2s;
+}
+#normalControllers circle:hover{
+    fill: rgb(22, 135, 40);
+    r: 10px;
+}
+
+#normalControllers2 circle{
+    transition: r 0.2s;
+    cursor: move;
+}
+
+#normalControllers2 circle:hover{
+    /* fill: rgb(22, 135, 40); */
+    filter: brightness(1.1);
+    r: 10px;
+}
+
+.normal-mix form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.normal-mix form input{
+    width: 70px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-align: end;
+    font-size: 12px;
+}
+
