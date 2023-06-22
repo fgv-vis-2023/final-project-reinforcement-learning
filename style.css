@@ -534,8 +534,8 @@ p, ul{
         stroke: #000;
     }
     50% {
-        stroke-width: 5px;
-        stroke: #4b5c4e;
+        stroke-width: 6px;
+        stroke: #738276;
         filter: blur(1px);
     }
     100% {

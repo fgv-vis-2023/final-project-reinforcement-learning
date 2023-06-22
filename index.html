@@ -163,28 +163,20 @@
                 </div>
             </div>
 
-
+            <h1>Apêndices</h1>
             <p>Vale ressaltar que os algoritmos de classificação utilizam apenas das informações de feature e da classe, o valor de X e Y ficam apenas para ilustração e visualizações. Para entender melhor o processos de amostragem que nós utilizamos, <b>interaja com o box abaixo</b>:</p>
         </section>
         <section id="sampling" class="box">
             <div class="innerbox">
                 <h2>Faça sua própria amostragem</h2>
                 <p>
-                    Utilize da interatividade do gráfico abaixo para alterar as normais, e amostrar sua amostra vinda de uma normal multivariada!
+                    Para compreender melhor o processo utilizado na geração dos dados neste trabalho, explore as visualizações a seguir:
                 </p>
 
-                <div class="center normal-mix">
-                    <div class="controller">
-                        <div id="observablehq-normalcontrollersMix-b93d3fcc"></div>
-                        <div id="observablehq-viewof-normalMixturePlot-b93d3fcc"></div>
-                    </div>
-                    <div class="legenda">
-                        <div class="parameters" id="observablehq-viewof-gaussian_mixture_parameters-b93d3fcc"></div>
-                        <div id="observablehq-viewof-legend_normalmixture-b93d3fcc"></div>
-                    </div>
-                    <div id="observablehq-viewof-weight-b93d3fcc"></div>
+                
 
-                </div>
+                <p>Em primeiro lugar, é fundamental compreender como criar amostras a partir de uma distribuição qualquer. Neste estudo, estamos utilizando a distribuição gaussiana. No gráfico abaixo, é possível ajustar a média e a variância das distribuições que governam o comportamento dos eixos. Aumentar a altura da curva altera a variância dos dados, enquanto deslocá-la lateralmente significa modificar a média. Manipule livremente as bolinhas no topo das curvas para observar esse efeito aplicado a cada eixo.</p>
+                
                 <div class="sampling-from-normals">
                     <div class="positioning">
                         <div class="controller" id="controllers-x">
@@ -203,6 +195,23 @@
                         </div>
                     </div>
                 </div>
+                
+                <p>Uma vez que somos capazes de criar essas amostras, é importante entender como fazê-lo para pontos de classes diferentes. O que ocorre é que cada classe de árvore possui sua própria distribuição, com uma probabilidade associada de ser escolhida para a amostra. Dessa forma, conseguimos controlar a proporção de cada classe de árvore na amostra final. O resultado desse processo, em cada eixo, é uma combinação de distribuições gaussianas.</p>
+
+                <div class="center normal-mix">
+                    <div class="controller">
+                        <div id="observablehq-normalcontrollersMix-b93d3fcc"></div>
+                        <div id="observablehq-viewof-normalMixturePlot-b93d3fcc"></div>
+                    </div>
+                    <div class="legenda">
+                        <div class="parameters" id="observablehq-viewof-gaussian_mixture_parameters-b93d3fcc"></div>
+                        <div id="observablehq-viewof-legend_normalmixture-b93d3fcc"></div>
+                    </div>
+                    <div id="observablehq-viewof-weight-b93d3fcc"></div>
+                </div>
+                <p>
+                    No gráfico acima, temos duas curvas gaussianas (representando características de duas classes diferentes) e uma que representa a mistura das duas, ou seja, a distribuição geral dos pontos.
+                </p>
             </div>
         </section>
 
