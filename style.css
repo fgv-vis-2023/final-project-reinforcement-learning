@@ -329,6 +329,7 @@ p, ul{
     position: absolute;
     left: 10px;
     top: 10px;
+    padding: 5px;
     pointer-events: none;
 }
 
@@ -718,6 +719,17 @@ button:active:after {
     button {
         padding: 5px 5px;
         font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 990px) {
+    #splashgraphic .legenda{    
+        position: absolute;
+        right: 0;
+        top: 180px;
+    }
+    #splashgraphic .gap{
+        display: none;
     }
 }
 
