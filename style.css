@@ -183,6 +183,15 @@ p, ul{
     /* background-size: cover;: */
 }
 
+/* @media (max-width: 550px){
+    #treetops{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 300px;
+    }
+} */
+
 #treetops>div{
     height: 100%;
 }
@@ -210,11 +219,17 @@ p, ul{
 
 .pseudo-label>div:first-child{
     display: flex;
-    /* flex-wrap: wrap-reverse; */
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
     gap: 30px;
     margin: 30px 0 0 0;
+}
+
+@media (max-width: 900px) {
+    .pseudo-label>div:first-child{
+        flex-wrap: wrap-reverse;
+    }
 }
 
 .pseudo-label .left{
