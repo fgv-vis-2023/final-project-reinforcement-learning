@@ -509,7 +509,7 @@ p, ul{
     stroke-width: 2px;
     cursor: help;
     transform-origin: center;
-    animation: pulsating_stroke 2s infinite ease-in-out;
+    animation: pulsating_stroke 6s infinite ease-in-out;
 }
 
 #fluxograma_svg>svg .infoBox:nth-child(2n){
@@ -525,6 +525,7 @@ p, ul{
     fill: #0000;
     stroke-width: 5px;
     stroke: #afd5b5;
+    animation: none;
 }
 
 @keyframes pulsating_stroke {
@@ -534,7 +535,7 @@ p, ul{
     }
     50% {
         stroke-width: 5px;
-        stroke: #b9c7bb;
+        stroke: #4b5c4e;
         filter: blur(1px);
     }
     100% {
