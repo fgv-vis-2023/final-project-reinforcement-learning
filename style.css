@@ -61,6 +61,10 @@ section{
     transition: all 0.3s;
 }
 
+.timeline output{
+    width: 20px;
+}
+
 h1 {
     text-align: initial;
     border-bottom: 2px solid #e5e5e5;
@@ -472,6 +476,7 @@ p, ul{
     width: 100% !important;
     padding-left: 110px !important;
     font-size: 14px;
+    color: #565656;
     line-height: 1;
     margin: 0;
     margin-bottom: 25px;
@@ -722,3 +727,116 @@ button:active:after {
     text-align: center;
     width: 100px;
 }
+
+
+
+
+
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 25rem;
+  }
+  
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #c2f5dd;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #2f9352;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #2f9352;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[type="range"]::-moz-range-track {
+    background-color: #c2f5dd;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-moz-range-thumb {
+    background-color: #2f9352;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #2f9352;
+    outline-offset: 0.125rem;
+  }
+
+  .confusionMatrix svg rect{
+    cursor: default !important;
+  }
+
+  
+#current_sample_params{
+    width: 130px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    margin: 10px 0;
+}
+
+#current_sample_params>b{
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+#current_sample_params>p{
+    color: #5f5f5f;
+    font-size: 12px;
+    margin: 0;
+    display: inline-block;
+    line-height: 1.3;
+    width: 12ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+}
+
+#current_sample_params .mean1::before, #current_sample_params .var1::before {
+    color: rgb(54, 95, 47);
+}
+#current_sample_params .mean2::before, #current_sample_params .var2::before {
+    color: rgb(83, 124, 106);
+}
+
+#current_sample_params .mean1::before{content: "● μ₁ : ";}
+#current_sample_params .mean2::before{content: "● μ₂ : ";}
+#current_sample_params .var1::before{content: "● σ₁² : ";}
+#current_sample_params .var2::before{content: "● σ₂² : ";}
