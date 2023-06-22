@@ -148,8 +148,7 @@
 
         <section id="resultados">
             <h1>resultados</h1>
-            <p>aqui temos a demonstração dos resultados alcançados pelo algoritmo, mostrando a efetividade de sua classificação para o conjunto de dados em questão.</p>
-
+            <p>O método de pseudo-rotulagem revelou-se altamente efetivo na amostra gerada neste estudo, o que pode ser claramente observado na matriz de confusão a seguir. Conforme as iterações avançam, os valores se concentram cada vez mais na diagonal principal, indicando que o método está atribuindo corretamente as classes.</p>
             <br>
             <br>
             <br>
@@ -162,6 +161,11 @@
                     <div id="observablehq-viewof-matrix_legend-b93d3fcc"></div>
                 </div>
             </div>
+
+            <p>Embora neste exemplo tenhamos obtido resultados positivos, durante os testes com o método, encontramos diversos casos nos quais o classificador apresentou desempenho inferior ao selecionar classes aleatoriamente. Essa situação ocorre principalmente por dois motivos principais:</p>
+            <p>Como mencionado anteriormente, o método seleciona pontos que oferecem pouca informação sobre a distribuição das amostras, o que resulta em decisões baseadas em uma visão pouco esclarecedora do problema.</p>
+            <p>O desempenho do método é altamente dependente das condições iniciais, ou seja, quais pontos foram selecionados inicialmente? Esse problema é agravado pelo fato de os dados serem simulados.</p>
+            <p>Para abordar ambas as questões mencionadas, propõe-se a adoção de um algoritmo modificado com reforço de aprendizagem (RL), que proporcionaria uma curva de decisão mais suave e permitiria tomadas de decisões mais conscientes dos resultados obtidos.</p>
 
             <h1>Apêndices</h1>
             <p>Vale ressaltar que os algoritmos de classificação utilizam apenas das informações de feature e da classe, o valor de X e Y ficam apenas para ilustração e visualizações. Para entender melhor o processos de amostragem que nós utilizamos, <b>interaja com o box abaixo</b>:</p>
@@ -232,7 +236,9 @@
             </h2>
             <div class="authors">
                 <span>Gustavo Sanches</span> <span>Rodrigo Pintucci</span> <span>Lucas Treuke</span>
+                <a class="about" href="./about">About</a>
             </div>
+            
             <p>Observable notebook: <a href="https://observablehq.com/d/31ca7950886a92d8@1057">Reinforcement Learning by amigos</a></p>
         </section>
     </content>
