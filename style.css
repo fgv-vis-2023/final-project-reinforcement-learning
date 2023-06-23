@@ -942,3 +942,32 @@ input[type="range"] {
 #current_sample_params .mean2::before{content: "● μ₂ : ";}
 #current_sample_params .var1::before{content: "● σ₁² : ";}
 #current_sample_params .var2::before{content: "● σ₂² : ";}
+
+.timeline .help{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin-right: 10px;
+}
+
+.timeline .help span{
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.timeline .help>div{
+    width: 0px;
+    transition: all 0.5s ease-in-out;
+}
+.timeline .help:hover>div{
+    width: 100%;
+}
+
+.timeMarker{
+    position: absolute;
+    left: 8%;
+    bottom: 8%;
+    display: block;
+    width: 20px;
+    height: 20px !important;
+}

@@ -32,23 +32,23 @@
             <div class="gap"></div>
             <div id="treetops">
                 <div id="observablehq-viewof-page-ae147ea2"></div>
+                <div class="timeMarker">⌛</div>
             </div>
             <div class="legenda">
                 <div id="observablehq-legend_trees-ae147ea2"></div>
             </div>
         </div>
-
-
-        
-
-
     </section>
     <div class="timeline">
         <div class="help">
-            Use essa linha do tempo para interagir com as visualizações marcadas com ⌛⏳
+            <span class="hint">Passe o mouse aqui 🛈</span>
+            <div>
+                Use essa linha do tempo para interagir com as visualizações marcadas com ⌛⏳
+            </div>
         </div>
+        
         <div id="observablehq-viewof-iterationSlider-ae147ea2"></div>
-        <div>?</div>
+        
     </div>
     <content>
         <section id="introduction">
@@ -139,6 +139,7 @@
                         <div id="ps-label-graphic">
                             <div id="observablehq-viewof-pseudoLabel-ae147ea2"></div>
                             <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-ae147ea2"></div>
+                            <div style="transform: translatex(-32px);" class="timeMarker">⌛</div>
                         </div>
                     </div>
                     <div class="right">
@@ -167,6 +168,7 @@
             <div class="confusionMatrix">
                 <div class="left">
                     <div id="observablehq-viewof-matrix-ae147ea2"></div>
+                    <div style="bottom: auto; top: 42px;" class="timeMarker">⌛</div>
                 </div>
                 <div class="right">
                     <div id="observablehq-viewof-matrix_legend-ae147ea2"></div>
@@ -295,6 +297,16 @@
                 boxes[i].addEventListener("mouseout", function() {
                     diagram_text.classList.remove("info")
                     diagram_text.innerHTML = "Passe o mouse sobre os elementos para ver mais informações"
+                })
+            }
+        });
+
+        // fazendo com que os hints tenham o texto substítuido por 🛈 no primeiro hover
+        document.addEventListener("DOMContentLoaded", function(event) {
+            let hints = document.getElementsByClassName("hint")
+            for (let i = 0; i < hints.length; i++) {
+                hints[i].addEventListener("mouseover", function() {
+                    this.innerHTML = "🛈"
                 })
             }
         });
