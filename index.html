@@ -14,7 +14,7 @@
         <h1>
             <span>Visualize</span><span>Reinforce</span>
         </h1>
-        <h2 style="display: none;" class="authors">
+        <h2 style="display: none; border-bottom: none" class="authors">
             <span>Gustavo Sanches</span> <span>Rodrigo Pintucci</span> <span>Lucas Treuke</span>
         </h2>
 
@@ -24,10 +24,10 @@
         <div id="splashgraphic">
             <div class="gap"></div>
             <div id="treetops">
-                <div id="observablehq-viewof-page-d41f5db2"></div>
+                <div id="observablehq-viewof-page-ae147ea2"></div>
             </div>
             <div class="legenda">
-                <div id="observablehq-legend_trees-d41f5db2"></div>
+                <div id="observablehq-legend_trees-ae147ea2"></div>
             </div>
         </div>
 
@@ -37,7 +37,7 @@
 
     </section>
     <div class="timeline">
-        <div id="observablehq-viewof-iterationSlider-d41f5db2"></div>
+        <div id="observablehq-viewof-iterationSlider-ae147ea2"></div>
     </div>
     <content>
         <section id="introduction">
@@ -116,7 +116,7 @@
             <h1>Base de dados</h1>
             <p>No estudo realizado por La Rosa (2021), foram utilizadas imagens hiperespectrais juntamente com uma rede neural convolucional para identificar as copas das árvores e construir uma base de dados contendo características específicas de cada árvore, totalizando 14 classes de árvores com anotações. Neste trabalho, optaremos por simular os dados com o objetivo de avaliar a eficácia do método em um ambiente totalmente controlado. Em trabalhos futuros, pretendemos utilizar imagens reais das copas de árvores em conjunto com o pseudo-rotulamento.</p>
             <div class="center">
-                <div id="observablehq-viewof-gaussian_mixture-d41f5db2"></div>
+                <div id="observablehq-viewof-gaussian_mixture-ae147ea2"></div>
                 <div class="samplelabels"></div>
             </div>
             <p>A nossa amostragem toma partido da premissa de que as árvores possuem 5 atributos principais: Posição em X, posição em Y, característica 1, característica 2 e classe. A geração tanto da posição no eixo X quanto no Y foi feita apartir de uma váriavel aleatória uniforme com parâmetros 0 a 100, ou seja, as árvores tem igual probabilidade de estarem posicionadas em qualquer lugar do campo. Para as features e para a classe, foram criadas distribuições gaussianas por classe, e amostrado da mistura dessas distribuições.</p>            
@@ -126,8 +126,8 @@
                     <div class="left">
                         <h3>Predições: pseudo-label</h3>
                         <div id="ps-label-graphic">
-                            <div id="observablehq-viewof-pseudoLabel-d41f5db2"></div>
-                            <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-d41f5db2"></div>
+                            <div id="observablehq-viewof-pseudoLabel-ae147ea2"></div>
+                            <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-ae147ea2"></div>
                         </div>
                     </div>
                     <div class="right">
@@ -155,10 +155,10 @@
             <h3>Matriz de confusão</h3>
             <div class="confusionMatrix">
                 <div class="left">
-                    <div id="observablehq-viewof-matrix-d41f5db2"></div>
+                    <div id="observablehq-viewof-matrix-ae147ea2"></div>
                 </div>
                 <div class="right">
-                    <div id="observablehq-viewof-matrix_legend-d41f5db2"></div>
+                    <div id="observablehq-viewof-matrix_legend-ae147ea2"></div>
                 </div>
             </div>
 
@@ -182,19 +182,19 @@
                 <div class="sampling-from-normals">
                     <div class="positioning">
                         <div class="controller" id="controllers-x">
-                            <div id="observablehq-viewof-draggableNormals1-d41f5db2"></div>
-                            <div id="observablehq-normalcontrollers1-d41f5db2"></div> 
+                            <div id="observablehq-viewof-draggableNormals1-ae147ea2"></div>
+                            <div id="observablehq-normalcontrollers1-ae147ea2"></div> 
                         </div>
                     </div>
                     <div class="gap">
-                        <div id="observablehq-viewof-callafunction_btn-d41f5db2"></div>
-                        <div id="observablehq-viewof-sampling_parameters-d41f5db2"></div>
+                        <div id="observablehq-viewof-callafunction_btn-ae147ea2"></div>
+                        <div id="observablehq-viewof-sampling_parameters-ae147ea2"></div>
                     </div>
-                    <div id="observablehq-viewof-scatterOfSamples-d41f5db2"></div>
+                    <div id="observablehq-viewof-scatterOfSamples-ae147ea2"></div>
                     <div class="positioning reverse-y">
                         <div class="controller" id="controllers-y">
-                            <div id="observablehq-viewof-draggableNormals2-d41f5db2"></div>
-                            <div id="observablehq-normalcontrollers2-d41f5db2"></div>
+                            <div id="observablehq-viewof-draggableNormals2-ae147ea2"></div>
+                            <div id="observablehq-normalcontrollers2-ae147ea2"></div>
                         </div>
                     </div>
                 </div>
@@ -203,14 +203,14 @@
 
                 <div class="center normal-mix">
                     <div class="controller">
-                        <div id="observablehq-normalcontrollersMix-d41f5db2"></div>
-                        <div id="observablehq-viewof-normalMixturePlot-d41f5db2"></div>
+                        <div id="observablehq-normalcontrollersMix-ae147ea2"></div>
+                        <div id="observablehq-viewof-normalMixturePlot-ae147ea2"></div>
                     </div>
                     <div class="legenda">
-                        <div class="parameters" id="observablehq-viewof-gaussian_mixture_parameters-d41f5db2"></div>
-                        <div id="observablehq-viewof-legend_normalmixture-d41f5db2"></div>
+                        <div class="parameters" id="observablehq-viewof-gaussian_mixture_parameters-ae147ea2"></div>
+                        <div id="observablehq-viewof-legend_normalmixture-ae147ea2"></div>
                     </div>
-                    <div id="observablehq-viewof-weight-d41f5db2"></div>
+                    <div id="observablehq-viewof-weight-ae147ea2"></div>
                 </div>
                 <p>
                     No gráfico acima, temos duas curvas gaussianas (representando características de duas classes diferentes) e uma que representa a mistura das duas, ou seja, a distribuição geral dos pontos.
@@ -244,29 +244,29 @@
     
     <script type="module">
         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-        import define from "https://api.observablehq.com/d/31ca7950886a92d8@2685.js?v=3";
+        import define from "https://api.observablehq.com/d/31ca7950886a92d8@2746.js?v=3";
         new Runtime().module(define, name => {
-          if (name === "viewof iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-iterationSlider-d41f5db2"));
-          if (name === "viewof pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-pseudoLabel-d41f5db2"));
-          if (name === "viewof legend_pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-legend_pseudoLabel-d41f5db2"));
-          if (name === "viewof gaussian_mixture") return new Inspector(document.querySelector("#observablehq-viewof-gaussian_mixture-d41f5db2"));
-          if (name === "viewof page") return new Inspector(document.querySelector("#observablehq-viewof-page-d41f5db2"));
-          if (name === "legend_trees") return new Inspector(document.querySelector("#observablehq-legend_trees-d41f5db2"));
-          if (name === "viewof matrix") return new Inspector(document.querySelector("#observablehq-viewof-matrix-d41f5db2"));
-          if (name === "viewof matrix_legend") return new Inspector(document.querySelector("#observablehq-viewof-matrix_legend-d41f5db2"));
-          if (name === "viewof sampling_parameters") return new Inspector(document.querySelector("#observablehq-viewof-sampling_parameters-d41f5db2"));
-          if (name === "viewof draggableNormals1") return new Inspector(document.querySelector("#observablehq-viewof-draggableNormals1-d41f5db2"));
-          if (name === "normalcontrollers1") return new Inspector(document.querySelector("#observablehq-normalcontrollers1-d41f5db2"));
-          if (name === "viewof draggableNormals2") return new Inspector(document.querySelector("#observablehq-viewof-draggableNormals2-d41f5db2"));
-          if (name === "normalcontrollers2") return new Inspector(document.querySelector("#observablehq-normalcontrollers2-d41f5db2"));
-          if (name === "viewof scatterOfSamples") return new Inspector(document.querySelector("#observablehq-viewof-scatterOfSamples-d41f5db2"));
-          if (name === "viewof callafunction_btn") return new Inspector(document.querySelector("#observablehq-viewof-callafunction_btn-d41f5db2"));
-          if (name === "viewof weight") return new Inspector(document.querySelector("#observablehq-viewof-weight-d41f5db2"));
-          if (name === "normalcontrollersMix") return new Inspector(document.querySelector("#observablehq-normalcontrollersMix-d41f5db2"));
-          if (name === "viewof normalMixturePlot") return new Inspector(document.querySelector("#observablehq-viewof-normalMixturePlot-d41f5db2"));
-          if (name === "viewof legend_normalmixture") return new Inspector(document.querySelector("#observablehq-viewof-legend_normalmixture-d41f5db2"));
-          if (name === "viewof gaussian_mixture_parameters") return new Inspector(document.querySelector("#observablehq-viewof-gaussian_mixture_parameters-d41f5db2"));
-          return ["data_matrix","data_trees","data_pseudo","filter","trees","normal_colors","drag","normalMixture_configuration"].includes(name);
+        if (name === "viewof iterationSlider") return new Inspector(document.querySelector("#observablehq-viewof-iterationSlider-ae147ea2"));
+        if (name === "viewof pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-pseudoLabel-ae147ea2"));
+        if (name === "viewof legend_pseudoLabel") return new Inspector(document.querySelector("#observablehq-viewof-legend_pseudoLabel-ae147ea2"));
+        if (name === "viewof gaussian_mixture") return new Inspector(document.querySelector("#observablehq-viewof-gaussian_mixture-ae147ea2"));
+        if (name === "viewof page") return new Inspector(document.querySelector("#observablehq-viewof-page-ae147ea2"));
+        if (name === "legend_trees") return new Inspector(document.querySelector("#observablehq-legend_trees-ae147ea2"));
+        if (name === "viewof matrix") return new Inspector(document.querySelector("#observablehq-viewof-matrix-ae147ea2"));
+        if (name === "viewof matrix_legend") return new Inspector(document.querySelector("#observablehq-viewof-matrix_legend-ae147ea2"));
+        if (name === "viewof sampling_parameters") return new Inspector(document.querySelector("#observablehq-viewof-sampling_parameters-ae147ea2"));
+        if (name === "viewof draggableNormals1") return new Inspector(document.querySelector("#observablehq-viewof-draggableNormals1-ae147ea2"));
+        if (name === "normalcontrollers1") return new Inspector(document.querySelector("#observablehq-normalcontrollers1-ae147ea2"));
+        if (name === "viewof draggableNormals2") return new Inspector(document.querySelector("#observablehq-viewof-draggableNormals2-ae147ea2"));
+        if (name === "normalcontrollers2") return new Inspector(document.querySelector("#observablehq-normalcontrollers2-ae147ea2"));
+        if (name === "viewof scatterOfSamples") return new Inspector(document.querySelector("#observablehq-viewof-scatterOfSamples-ae147ea2"));
+        if (name === "viewof callafunction_btn") return new Inspector(document.querySelector("#observablehq-viewof-callafunction_btn-ae147ea2"));
+        if (name === "viewof weight") return new Inspector(document.querySelector("#observablehq-viewof-weight-ae147ea2"));
+        if (name === "normalcontrollersMix") return new Inspector(document.querySelector("#observablehq-normalcontrollersMix-ae147ea2"));
+        if (name === "viewof normalMixturePlot") return new Inspector(document.querySelector("#observablehq-viewof-normalMixturePlot-ae147ea2"));
+        if (name === "viewof legend_normalmixture") return new Inspector(document.querySelector("#observablehq-viewof-legend_normalmixture-ae147ea2"));
+        if (name === "viewof gaussian_mixture_parameters") return new Inspector(document.querySelector("#observablehq-viewof-gaussian_mixture_parameters-ae147ea2"));
+        return ["data_matrix","data_trees","data_pseudo","filter","trees","normal_colors","drag","normalMixture_configuration"].includes(name);
         });
 
         // lets add a function that will run when the document is loaded
@@ -293,4 +293,3 @@
 
 </body>
 </html>
-
