@@ -225,10 +225,16 @@ p, ul{
 
 
 
+#splashgraphic .timeMarker{
+    left: 50%; transform: translate(-409px, -61px);
+}
+
+    
 
 
 #splashgraphic{
     flex-grow: 1;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
