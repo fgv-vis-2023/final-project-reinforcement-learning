@@ -57,15 +57,15 @@
         <section id="introduction">
             <h1>Introdução</h1>
             <p>
-                Mapear as espécies de árvores em uma vasta floresta é uma tarefa desafiadora. Uma das principais complicações decorre da escassez de dados anotados, ou seja, é frequente encontrar conjuntos de dados em que as amostras não possuem informações sobre a variável a ser prevista. No contexto do estudo em questão, a proporção de árvores das quais possuímos conhecimento das espécies e daquelas das quais não possuímos é bastante reduzida. Com base nessa premissa, propomos a aplicação do algoritmo de pseudo-labeling em conjunto com o Aprendizado por Reforço.
+                Mapear as espécies de árvores em uma vasta floresta é uma tarefa desafiadora. Uma das principais complicações decorre da escassez de dados anotados, ou seja, é frequente encontrar conjuntos de dados em que as amostras não possuem informações sobre a variável a ser prevista. No contexto do estudo em questão, a proporção de árvores das quais possuímos conhecimento das espécies e daquelas das quais não possuímos é bastante reduzida. Com base nessa premissa, propomos a aplicação do algoritmo de pseudo-rotulagem em conjunto com o Aprendizado por Reforço.
             </p>
 
             <p>
-                De acordo com Liu (2021), o algoritmo de pseudo-rotulagem tem sido amplamente adotado devido à sua eficiência e utilidade na classificação de <b>conjuntos de dados com poucas anotações</b>. O algoritmo opera da seguinte maneira: em primeiro lugar, um modelo de classificação é treinado utilizando os poucos dados que possuem rótulos; em seguida, são selecionados e categorizados os dados do conjunto que não possuem rótulos; por fim, os dados selecionados são utilizados em conjunto com os dados originalmente rotulados para re-treinar o classificador na etapa inicial.
+                De acordo com Liu (2021), o algoritmo de Pseudo-rotulagem tem sido amplamente adotado devido à sua eficiência e utilidade na classificação de <b>conjuntos de dados com poucas anotações</b>. O algoritmo opera da seguinte maneira: em primeiro lugar, um modelo de classificação é treinado utilizando os poucos dados que possuem rótulos; em seguida, são selecionados e categorizados os dados do conjunto que não possuem rótulos; por fim, os dados selecionados são utilizados em conjunto com os dados originalmente rotulados para re-treinar o classificador na etapa inicial.
             </p>
 
             <p>
-                O Reinforcement learning será utilizado como parte do processo de escolha de quais dados devem ser categorizados e quais entrarão para o conjunto de treinamento. O objetivo dessa parte é tentar escolher apenas dados que são mais representativos e que expliquem melhor a distribuição de cada classe.
+                O Aprendizado de Máquinas será utilizado como parte do processo de escolha de quais dados devem ser categorizados e quais entrarão para o conjunto de treinamento. O objetivo dessa parte é tentar escolher apenas dados que são mais representativos e que expliquem melhor a distribuição de cada classe.
             </p>
 
             <div id="fluxograma">
@@ -92,7 +92,7 @@
                             entrarão para o conjunto de treino."
                         class="infoBox" x="786.49" y="336.42" width="197" height="164" rx="14.06"/>
                         <rect data-info="
-                            Algoritmo de reinforcement learning (RL) que decidirá
+                            Algoritmo de aprendizado por reforço (RL) que decidirá
                             com base em regras de negócio quais dessas predições
                             serão tomadas como verdadeiras, e adicionadas ao 
                             conjunto de treino." 
@@ -100,7 +100,7 @@
                         <rect data-info="
                             O novo conjunto de treino consiste nos dados do 
                             conjunto inicial adicionado todas as amostras com os 
-                            pseudo-labels das iterações anteriores."
+                            pseudo-rótulos das iterações anteriores."
                         class="infoBox" x="1064.66" y="78.75" width="197" height="164" rx="14.06"/>
 
                         <circle data-info="
@@ -125,10 +125,10 @@
 
         </section>
         
-        <section id="Metodo">
+        <section id="Método">
 
             <h1>Base de dados</h1>
-            <p>No estudo realizado por La Rosa (2021), foram utilizadas imagens hiperespectrais juntamente com uma rede neural convolucional para identificar as copas das árvores e construir uma base de dados contendo características específicas de cada árvore, totalizando 14 classes de árvores com anotações. Neste trabalho, optaremos por simular os dados com o objetivo de avaliar a eficácia do método em um ambiente totalmente controlado. Em trabalhos futuros, pretendemos utilizar imagens reais das copas de árvores em conjunto com o pseudo-rotulamento.</p>
+            <p>No estudo realizado por La Rosa (2021), foram utilizadas imagens hiperespectrais juntamente com uma rede neural convolucional para identificar as copas das árvores e construir uma base de dados contendo características específicas de cada árvore, totalizando 14 classes de árvores com anotações. Neste trabalho, optaremos por simular os dados com o objetivo de avaliar a eficácia do método em um ambiente totalmente controlado. Em trabalhos futuros, pretendemos utilizar imagens reais das copas de árvores em conjunto com a pseudo-rotulagem.</p>
             <div class="center">
                 <div id="observablehq-viewof-gaussian_mixture-ae147ea2"></div>
                 <div class="samplelabels"></div>
@@ -138,7 +138,7 @@
             <div class="pseudo-label">
                 <div>
                     <div class="left">
-                        <h3>Predições: pseudo-label</h3>
+                        <h3>Predições: pseudo-rótulos</h3>
                         <div id="ps-label-graphic">
                             <div id="observablehq-viewof-pseudoLabel-ae147ea2"></div>
                             <div class="subtitles" id="observablehq-viewof-legend_pseudoLabel-ae147ea2"></div>
@@ -146,15 +146,15 @@
                         </div>
                     </div>
                     <div class="right">
-                        <h2>pseudo-labeling</h2>
+                        <h2>Pseudo-rotulagem</h2>
                         <p>
-                            O algoritmo de pseudo-labeling consiste em alimentar o conjunto de treinamento com labels virtuais. Para isso, utiliza-se dos poucos dados anotados disponíveis no dataset para treinar um classificador, e com base nessas classificações feitas podemos decidir incluir ou não novas amostras no conjunto de treino.
-                            Uma forma que, segundo Cascante-Bonila (2020), acompanha o estado da arte é utilizar de análise de currículo juntamente com o pseudo-labeling, que consiste em avaliar apenas os pontos com maior probabilidade de ser de determinada classe.
+                            O algoritmo de pseudo-rotulagem consiste em alimentar o conjunto de treinamento com labels virtuais. Para isso, utiliza-se dos poucos dados anotados disponíveis no dataset para treinar um classificador, e com base nessas classificações feitas podemos decidir incluir ou não novas amostras no conjunto de treino.
+                            Uma forma que, segundo Cascante-Bonila (2020), acompanha o estado da arte é utilizar de análise de currículo juntamente com a pseudo-rotulagem, que consiste em avaliar apenas os pontos com maior probabilidade de ser de determinada classe.
                         </p>
                     </div>
                 </div>   
                 <p>
-                    O gráfico acima representa o algoritmo de pseudo-labeling com análise de currículo classificando 900 pontos tendo acesso inicialmente a apenas 100. Embora esse método seja considerado acompanhar o estado da arte de acordo com Cascante-Bonilla (2020), ele possui a limitação de dar prioridade aos pontos que não descrevem adequadamente a distribuição. No caso de uma variável gaussiana, ele privilegiaria pontos mais próximos da moda. Para resolver essa problemática, deseja-se além de utilizar da análise de currículo, incluir um algoritmo de RL que tome a decisão de incluir, ou não, os novos pontos. Dessa forma conseguimos adicionar informações adicionais na hora da decisão, como por exemplo a proporção da distribuição das árvores na floresta (30% macieira e 70% bananeira).
+                    O gráfico acima representa o algoritmo de pseudo-rotulagem com análise de currículo classificando 900 pontos tendo acesso inicialmente a apenas 100. Embora esse método seja considerado acompanhar o estado da arte de acordo com Cascante-Bonilla (2020), ele possui a limitação de dar prioridade aos pontos que não descrevem adequadamente a distribuição. No caso de uma variável gaussiana, ele privilegiaria pontos mais próximos da moda. Para resolver essa problemática, deseja-se além de utilizar da análise de currículo, incluir um algoritmo de RL que tome a decisão de incluir, ou não, os novos pontos. Dessa forma conseguimos adicionar informações adicionais na hora da decisão, como por exemplo a proporção da distribuição das árvores na floresta (30% macieira e 70% bananeira).
                 </p>
             </div>
         
@@ -181,7 +181,7 @@
             <p>Embora neste exemplo tenhamos obtido resultados positivos, durante os testes com o método, encontramos diversos casos nos quais o classificador apresentou desempenho inferior ao selecionar classes aleatoriamente. Essa situação ocorre principalmente por dois motivos principais:</p>
             <p>Como mencionado anteriormente, o método seleciona pontos que oferecem pouca informação sobre a distribuição das amostras, o que resulta em decisões baseadas em uma visão pouco esclarecedora do problema.</p>
             <p>O desempenho do método é altamente dependente das condições iniciais, ou seja, quais pontos foram selecionados inicialmente? Esse problema é agravado pelo fato de os dados serem simulados.</p>
-            <p>Para abordar ambas as questões mencionadas, propõe-se a adoção de um algoritmo modificado com reforço de aprendizagem (RL), que proporcionaria uma curva de decisão mais suave e permitiria tomadas de decisões mais conscientes dos resultados obtidos.</p>
+            <p>Para abordar ambas as questões mencionadas, propõe-se a adoção de um algoritmo modificado com aprendizado por reforço (RL), que proporcionaria uma curva de decisão mais suave e permitiria tomadas de decisões mais conscientes dos resultados obtidos.</p>
 
             <h1>Apêndices</h1>
             <p>Vale ressaltar que os algoritmos de classificação utilizam apenas das informações de feature e da classe, o valor de X e Y ficam apenas para ilustração e visualizações. Para entender melhor o processos de amostragem que nós utilizamos, <b>interaja com o box abaixo</b>:</p>

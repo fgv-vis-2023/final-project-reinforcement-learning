@@ -61,7 +61,7 @@ Em geral, estas foram as sugestões mais importantes que recebemos:
     - Nosso gráfico de dados reais possuía um *hover* que não mostrava nenhuma informação, o que foi corrigido.
 
 - Transformar o título do splash em uma pergunta, com subtítulo para informações;
-    - Alteramos o título para "Como classificar árvores eficientemente?", com o subtítulo "Classificação de árvores dadas poucas amostras rotuladas".
+    - Alteramos o título para "Como classificando florestas", com o subtítulo "Classificando árvores em uma floresta densa".
 
 - Informações para o slider;
     - Adicionamos indicações de onde o usuário pode utilizar o slider;
@@ -90,7 +90,7 @@ Algumas sugestões foram deixadas de lado, pois não se encaixavam na narrativa 
 
 O resultado final pode ser visto abaixo:
 
-![Final](./readImages/mvp.png)
+![Final](./readImages/final.png)
 
 
 ### Equipe e divisão de tarefas
