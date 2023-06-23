@@ -12,11 +12,11 @@ Utilizamos do *d3.js* para a construção da visualização, sendo importado par
 
 ### Definindo o tema
 
-Nosso projeto começa em outra disciplina, Aprendizado de Máquinas. Nesta, decidimos explorar uma área não abordada em sala, *Reinforcement Learning*. Conversando com professores da área de *Machine* e *Deep Learning*, chegamos num caso de uso interessante, a classificação de árvores de uma floresta. 
+Nosso projeto começa em outra disciplina, Aprendizado de Máquinas. Nesta, decidimos explorar uma área não abordada em sala, *Aprendizado por Reforço*. Conversando com professores da área de *Aprendizado de Máquinas* e *Aprendizado Profundo*, chegamos num caso de uso interessante, a classificação de árvores de uma floresta. 
 
 Temos a seguinte situação: imagens são tiradas por cima de uma floresta, e devido à dificuldade de acesso, apenas alguma das árvores são rotuladas. O objetivo é utilizar as imagens rotuladas para classificar as demais. 
-Para solucionar isso, primeiro utilizamos de *Pseudo-Labeling*, que consiste em utilizar um modelo de classificação para rotular os dados não rotulados, adicionando-os ao conjunto de treinamento. Para isso, parte dos pontos que possui maior confiança.
-Como o modelo de classificação utilizado está longe de ser perfeito, buscamos melhorar seu desempenho utilizando de *Reinforcement Learning*, que atribui uma recompensa baseada em detalhes de negócio e conhecimento prévio. 
+Para solucionar isso, primeiro utilizamos de *Pseudo-Rotulagem*, que consiste em utilizar um modelo de classificação para rotular os dados não rotulados, adicionando-os ao conjunto de treinamento. Para isso, parte dos pontos que possui maior confiança.
+Como o modelo de classificação utilizado está longe de ser perfeito, buscamos melhorar seu desempenho utilizando de *Aprendizado por Reforço*, que atribui uma recompensa baseada em detalhes de negócio e conhecimento prévio. 
 
 Contudo, o foco deste outro trabalho é a aplicação dos conceitos, que não são tão simples de serem compreendido e deixam a desejar grandes representações visuais dos dados. Dessa forma, decidimos utilizar o projeto final da disciplina de Visualização de Dados para criar uma visualização que sirva como um guia interativo para o entendimento dos conceitos por trás do problema, para o público geral e para nós mesmos.
 
@@ -24,7 +24,7 @@ Contudo, o foco deste outro trabalho é a aplicação dos conceitos, que não s�
 
 Como nosso propósito é criar uma visualização que sirva como um guia interativo para o entendimento dos conceitos, precisamos de dados que sejam capazes de representar o problema de forma clara e objetiva. Dessa forma, para termos um maior controle sobre os dados, decidimos utilizar dados sintéticos, ou seja, gerados por nós mesmos.
 Temos um total de 1000 pontos, divididas em 4 classes. Cada classe tem duas características, que são geradas aleatoriamente, seguindo uma distribuição normal, sendo que cada classe tem uma média diferente e variância específica. Além disso, todos os pontos possuem coordenadas x e y, que são geradas aleatoriamente, seguindo a mesma distribuição uniforme, de forma que estas coordenadas não possuem relação com as características.
-No fim, é criado outro dataset, onde apenas 10% dos pontos estão rotulados, sendo que estes foram escolhidos aleatoriamente. Este dataset possui todas as iterações do *Pseudo-Labeling*, de forma que é possível visualizar a evolução da rotulação dos pontos ao longo das iterações. Dessa forma, é possível comparar a rotulação final com os dados originais. 
+No fim, é criado outro dataset, onde apenas 10% dos pontos estão rotulados, sendo que estes foram escolhidos aleatoriamente. Este dataset possui todas as iterações do *Pseudo-Rotulagem*, de forma que é possível visualizar a evolução da rotulação dos pontos ao longo das iterações. Dessa forma, é possível comparar a rotulação final com os dados originais. 
 
 ### Criando protótipos
 
@@ -32,7 +32,7 @@ Uma vez definido o tema, desenvolvemos um protótipo inicial em um *software* de
 
 ![Primeiro protótipo](./readImages/prototype1.png)
 
-Ainda não havíamos definido quais dados seriam utilizados, mas já tínhamos em mente que seria algo relacionado à classificação de árvores. Assim, nossa ideia era criar um site baseado em outros que apresentam guias interativos de conceitos de *Machine Learning*, como [A Practical Guide to Gaussian Processes](https://infallible-thompson-49de36.netlify.app/) e [Understanding RL Vision](https://distill.pub/2020/understanding-rl-vision/).
+Ainda não havíamos definido quais dados seriam utilizados, mas já tínhamos em mente que seria algo relacionado à classificação de árvores. Assim, nossa ideia era criar um site baseado em outros que apresentam guias interativos de conceitos de *Aprendizado de Máquinas*, como [A Practical Guide to Gaussian Processes](https://infallible-thompson-49de36.netlify.app/) e [Understanding RL Vision](https://distill.pub/2020/understanding-rl-vision/).
 Depois de trabalhar um pouco com os dados, refizemos o protótipo, utilizando um dos gráficos que seriam utilizados na visualização final. O resultado pode ser visto abaixo:
 
 ![Segundo protótipo](./readImages/prototype2.png)
@@ -46,7 +46,48 @@ Assim, chegamos à construção do site *MVP*, que foi apresentado em sala de au
 
 ![MVP](./readImages/mvp.png)
 
-Após a apresentação, recebemos o *feedback* dos colegas, percebemos que muitas coisas ainda poderiam ser melhoradas. Dentre estas, melhoramos a estética dos gráficos e do site, adicionamos mais interatividade e melhoramos a narrativa.
+Após a apresentação, recebemos o *feedback* dos colegas, percebemos que muitas coisas ainda poderiam ser melhoradas. Dentre estas, melhoramos a estética dos gráficos e do site, adicionamos mais interatividade e aprimoramos a narrativa.
+Em geral, estas foram as sugestões mais importantes que recebemos:
+
+- Utilizar um padrão visual para os gráficos;
+    - Para isso, mudamos a paleta de cores de gráficos como a matriz de confusão e amostragens, para que ficassem mais parecidos com os demais;
+    - Alteramos tamanho e fonte dos textos.
+
+- Usar de texto de forma mais dinâmica e eficiente;
+    - Criamos um fluxograma interativo, onde caixas de texto são adicionadas conforme o usuário faz *hover* em cada etapa;
+    - Reordenamos as seções do site, para que o usuário possa ler o texto de forma mais fluida e intuitiva.
+
+- Corrigir gráficos com hovers sem tooltip;
+    - Nosso gráfico de dados reais possuía um *hover* que não mostrava nenhuma informação, o que foi corrigido.
+
+- Transformar o título do splash em uma pergunta, com subtítulo para informações;
+    - Alteramos o título para "Como classificar árvores eficientemente?", com o subtítulo "Classificação de árvores dadas poucas amostras rotuladas".
+
+- Informações para o slider;
+    - Adicionamos indicações de onde o usuário pode utilizar o slider;
+    - O slider agora indica que os valores são referentes à iteração.
+
+- Adicionar legenda para gráficos de amostragem;
+    - Adicionamos uma legenda para o gráfico de mistura de normais, para que o usuário entenda o que cada linha representa;
+    - Adicionamos informação de média e variância em ambos os gráficos de amostragem.
+
+- Aprimoramento geral do texto;
+    - Completamos o texto do site para seções onde se utilizavam *lorem ipsum*;
+    - Correção de typos e padronização de termos.
+
+- Redimensionar splash e adicionar filtros para reduzir overplotting;
+    - O gráfico de splash, antes quadrado, foi redimensionado para um retângulo, para que o usuário possa ver melhor os pontos;
+    - Adicionamos filtros para que o usuário possa ver melhor as classes desejadas.
+
+Algumas sugestões foram deixadas de lado, pois não se encaixavam na narrativa que queríamos apresentar. Dentre estas, podemos citar:
+
+- Reduzir número de tooltips;
+    - Como queríamos que o usuário pudesse explorar os dados, não achamos que seria uma boa ideia remover os tooltips, pois eles são uma forma de apresentar informações de pontos específicos.
+
+- Substituir nome das *features* por exemplos temáticos de árvore;
+    - Gostaríamos de deixar as características mais genéricas, para que o usuário possa entender que quaisquer características podem ser utilizadas para classificar árvores;
+    - Contudo, para padronizar o texto, trocaríamos o nome das *features* por "característica 1" e "característica 2".
+
 O resultado final pode ser visto abaixo:
 
 ![Final](./readImages/mvp.png)
@@ -66,7 +107,7 @@ Vale ressaltar que a participação dos membros não se limitou às áreas de ma
 ### Overview
 
 A implementação do projeto foi feita em *d3.js*, como mencionado anteriormente. Para a versão final, temos um único *slider*, que funciona universalmente para todos os gráficos que dependem de iteração, uma vez que estes estão conectados:
-- **Slider universal**: O *slider* é utilizado para selecionar a iteração do *Pseudo-Labeling* que será exibida, podendo ser alterada manualmente pelo usuário.
+- **Slider universal**: O *slider* é utilizado para selecionar a iteração do *Pseudo-Rotulagem* que será exibida, podendo ser alterada manualmente pelo usuário.
     - **Animação**: O usuário pode também selecionar a opção de animação, através de um botão de *play*, que fará com que o ano seja atualizado automaticamente. 
 
 A seguir, temos uma breve descrição de cada gráfico e suas funções de interatividade.
@@ -83,8 +124,15 @@ Temos como gráfico principal um *scatterplot*, cuja aparência é de modo a sim
     - A cor do ponto é alterada para vermelho durante a interação, retornando à cor original ao finalizar.
     - O *tooltip* retorna a classe atribuída ao ponto, as duas características de interesse do projeto e as coordenadas *x* e *y* do ponto.
 
-#### Pseudo-Labeling
-O gráfico de *Pseudo-Labeling* é um *scatterplot* que representa a classificação de árvores ao longo das iterações do algoritmo. Agora, o gráfico se encontra em um plano cartesiano no espaço de características. Suas funções de interatividade são:
+#### Fluxograma interativo
+O fluxograma interativo é uma representação visual do algoritmo de *Pseudo-Rotulagem* com *Apredizado por Reforço*. Ele possui várias seções, que são adicionadas conforme o usuário faz *hover* em cada etapa.
+ Suas funções de interatividade são:
+- **Hover**: ao realizar *hover* sobre uma etapa, uma caixa de texto é adicionada à seção de texto, explicando a etapa em questão.
+    - A caixa de texto é removida ao finalizar a interação.
+    - A seção do fluxograma que representa a etapa em questão é destacada, enquanto as outras seções são escurecidas. Ao finalizar a interação, todas as seções retornam ao normal.
+
+#### Pseudo-Rotulagem
+O gráfico de *Pseudo-Rotulagem* é um *scatterplot* que representa a classificação de árvores ao longo das iterações do algoritmo. Agora, o gráfico se encontra em um plano cartesiano no espaço de características. Suas funções de interatividade são:
 
 - **Slider universal**;
 - **Hover**: Realizar *hover* sobre um ponto faz com que ele seja destacado, e suas informações são exibidas em um *tooltip*.
