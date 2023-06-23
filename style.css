@@ -101,6 +101,7 @@ body>content{
 #splash h1 span:last-child{
     color: #FFF;
     -webkit-text-stroke: 1px #000;
+    margin-left: 10px;
 }
 
 
