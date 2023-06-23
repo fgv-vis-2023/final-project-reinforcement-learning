@@ -90,7 +90,7 @@ Algumas sugestões foram deixadas de lado, pois não se encaixavam na narrativa 
 
 O resultado final pode ser visto abaixo:
 
-![Final](./readImages/mvp.png)
+![Final](./readImages/final.png)
 
 
 ### Equipe e divisão de tarefas
