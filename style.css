@@ -151,7 +151,7 @@ h1 {
 #splash h1{
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 40px;
     border-bottom: 2px solid #000;
     margin: 10px 100px 0 100px;
     text-align: center;
@@ -957,6 +957,7 @@ input[type="range"] {
 
 .timeline .help>div{
     width: 0px;
+    font-size: 10px;
     transition: all 0.5s ease-in-out;
 }
 .timeline .help:hover>div{
